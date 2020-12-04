@@ -1,0 +1,131 @@
+/* reset padrão de navegador + corpo do site */
+* { box-sizing: border-box; }
+
+body {
+   max-width: 960px;
+   margin: 0 auto;
+}
+
+h2 { white-space: nowrap; }
+
+/* grid */
+.row {
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 0;
+   margin-bottom: 0;
+   max-width: 75rem;
+}
+
+.row .row {
+   /*width: auto;*/
+   width: 100%;
+   margin-left: -0.9375rem;
+   margin-right: -0.9375rem;
+   margin-top: 0;
+   margin-bottom: 0;
+   max-width: none;
+}
+
+.row:before, .row:after {
+   content: " ";
+   display: table;
+}
+
+.row:after { clear: both; }
+
+.column, .columns {
+   padding-left: 0.9375rem;
+   padding-right: 0.9375rem;
+   width: 100%;
+   float: left;
+}
+
+[class*="column"] + [class*="column"]:last-child { float: right; }
+
+[class*="column"] + [class*="column"].end { float: left; }
+
+
+/* substituição */
+.display-none {
+   display: none;
+}
+
+/* cartela */
+input[type="button"] {
+   background-color: #3c3c3c;
+   color: #ffffff;
+   padding: 10px 10px;
+   margin-left: 20px;
+}
+
+input[type="button"].disabled {
+   background-color: #cccccc;
+   color: #3c3c3c;
+}
+
+span.last-num {
+   font-weight: bold;
+   font-size: 24px;
+   color: #f89e37;
+}
+
+.bingo-name {
+   padding-top: 40px;
+   padding-left: 20px;
+   font-weight: bold;
+   letter-spacing: 5px;
+}
+
+table { border-collapse: collapse; }
+
+table#bingo-caller,
+table#bingo-card { margin: 10px; }
+
+table td {
+   border-radius: 50%;
+   text-align: center;
+   vertical-align: middle;
+}
+
+table#bingo-caller td {
+   height: 35px;
+   width: 50px;
+   max-width: 35px;
+}
+
+table#bingo-card td {
+   height: 50px;
+   width: 50px;
+   max-width: 50px;
+   border: 1px solid #cccccc;
+}
+
+table#bingo-card td:hover {
+   cursor: pointer;
+}
+
+table td.drawn,
+table td.marked {
+   background-color: #cccccc;
+   color: #3c3c3c;
+}
+
+table td.drawn.last {
+   background-color: #3c3c3c;
+   color: #cccccc;
+}
+
+ol {
+   overflow-y: scroll;
+   min-height: 93px;
+   max-height: 93px;
+   border: 1px solid #cccccc;
+}
+
+@media only screen and (min-width: 512px) {
+   .medium-5         { width:       41.6666666667%; }
+   .medium-7         { width:       58.3333333333%; }
+}
